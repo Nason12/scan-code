@@ -1,65 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>内容选择</title>
+    <title>安全须知</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 20px; }
-        h1 { font-size: 20px; }
-        button { display: block; width: 200px; margin: 10px auto; padding: 10px; font-size: 14px; cursor: pointer; }
-        .content { display: none; margin-top: 10px; font-size: 14px; text-align: left; margin: 0 10px; }
-    </style>
-    <script>
-        function showContent(id) {
-            var contents = document.getElementsByClassName('content');
-            for (var i = 0; i < contents.length; i++) {
-                contents[i].style.display = 'none';
-            }
-            document.getElementById(id).style.display = 'block';
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
         }
-    </script>
+        .button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>请选择内容</h1>
-    <button onclick="showContent('visitor')">外来人员</button>
-    <button onclick="showContent('delivery')">送取货车辆</button>
-    <button onclick="showContent('material')">物资出入门</button>
-
-    <div id="visitor" class="content">
-        <h2>外来人员进入流程</h2>
-        <ol>
-            <li>联系接待人员生成相应信息</li>
-            <li>身份证在访客机上进行识别</li>
-            <li>识别成功后，刷脸进出</li>
-        </ol>
-        <p>注：</p>
-        <ul>
-            <li>只能前往接洽地区，不得前往其他地方。</li>
-            <li>需在规定时间范围内。</li>
-            <li>本系统仅限商务交流、技术交流、洽谈业务等人员。</li>
-        </ul>
-    </div>
-
-    <div id="delivery" class="content">
-        <h2>送取货车辆流程</h2>
-        <ol>
-            <li>联系接洽人员生成二维码。</li>
-            <li>出具二维码，配合门卫扫码查验。</li>
-            <li>查验无误，领取机动车临时通行证。</li>
-            <li>如有物资带出，需主动说明并配合记录。</li>
-            <li>出门时配合门卫查验，无误后离开。</li>
-        </ol>
-    </div>
-
-    <div id="material" class="content">
-        <h2>物资出入门流程</h2>
-        <ol>
-            <li>找接洽单位开具出门凭证。</li>
-            <li>如出门物资种类多、数量大、封箱不易查验，需授权监管人员监装。</li>
-            <li>持出门凭证，配合门卫查验。</li>
-            <li>出示返回物资的出门凭证，配合查验。</li>
-        </ol>
+    <h1>安全须知</h1>
+    <div>
+        <a href="visitor.html" class="button">外来人员进入流程</a>
+        <a href="vehicles.html" class="button">外来送取货车辆流程</a>
+        <a href="materials.html" class="button">物资出入门流程</a>
     </div>
 </body>
 </html>
